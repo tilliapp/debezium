@@ -1,6 +1,6 @@
 FROM debezium/connect
 
-ENV KAFKA_HEAP_OPTS="-Xms1024M -Xmx1024M"
+ENV KAFKA_HEAP_OPTS="-Xms1536M -Xmx1536M"
 
 ENV GROUP_ID=debezium
 ENV CONFIG_STORAGE_TOPIC=debezium_config
