@@ -10,7 +10,7 @@ export CONNECT_REST_EXTENSION_CLASSES=com.loobpack.data.kafka.connect.healthchec
 
 # https://stackoverflow.com/questions/45250575/securing-access-to-rest-api-of-kafka-connect
 echo "rest.extension.classes=org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension" >>/kafka/config/connect-distributed.properties
-echo "$REST_USERNAME: $REST_PASSWORD" >>/kafka/connect/connect.password
+echo "$CONNECT_REST_USERNAME: $CONNECT_REST_PASSWORD" >>/kafka/connect/connect.password
 echo 'KafkaConnect { org.apache.kafka.connect.rest.basic.auth.extension.PropertyFileLoginModule required file="/kafka/config/connect.password"; };' >>/kafka/config/connect-jaas.properties
 export KAFKA_OPTS="-Djava.security.auth.login.config=/kafka/config/connect-jaas.properties"
 
