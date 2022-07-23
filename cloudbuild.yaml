@@ -29,7 +29,7 @@ steps:
       - '--no-cpu-throttling'
       - '--image=$_GCR_HOSTNAME/$PROJECT_ID/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA'
       - '--port=8083'
-      - '--set-secrets=CONNECT_REST_PASSWORD=projects/86606559027/secrets/CONNECT_REST_PASSWORD=latest,CONNECT_REST_USERNAME=projects/86606559027/secrets/CONNECT_REST_USERNAME:latest,KEYSTORE_PASSWORD=projects/86606559027/secrets/KEYSTORE_PASSWORD:latest,TRUSTSTORE_PASSWORD=projects/86606559027/secrets/TRUSTSTORE_PASSWORD:latest'
+      - '--set-secrets=CONNECT_REST_PASSWORD=projects/86606559027/secrets/CONNECT_REST_PASSWORD:latest,CONNECT_REST_USERNAME=projects/86606559027/secrets/CONNECT_REST_USERNAME:latest,KEYSTORE_PASSWORD=projects/86606559027/secrets/KEYSTORE_PASSWORD:latest,TRUSTSTORE_PASSWORD=projects/86606559027/secrets/TRUSTSTORE_PASSWORD:latest'
       - >-
         --labels=managed-by=gcp-cloud-build-deploy-cloud-run,commit-sha=$COMMIT_SHA,gcb-build-id=$BUILD_ID,gcb-trigger-id=$_TRIGGER_ID,$_LABELS
       - '--region=$_DEPLOY_REGION'
